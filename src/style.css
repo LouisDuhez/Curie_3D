@@ -4,6 +4,7 @@ body
     margin: 0;
     overflow: hidden;
     box-sizing: border-box;
+    font-family: "Jost", sans-serif;
 }
 
 .webgl
@@ -15,7 +16,7 @@ body
 }
 
 #frame-info {
-    font-family: "Jost", sans-serif;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -78,4 +79,47 @@ body
     100% {
         transform: translateX(-10px);
     }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    z-index: 999;
+}
+nav a img{
+    height: 100%;
+}
+
+nav a {
+    height: 100%;
+}
+
+.billeterie {
+    height: fit-content;
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.info {
+    margin-bottom: 10px;
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.info a {
+    color: white;
+    border: solid white 1px;
+    border-radius: 100%;
+    padding: 5px 15px;
+    font-size: 1.125rem;
 }

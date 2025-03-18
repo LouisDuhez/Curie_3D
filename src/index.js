@@ -384,7 +384,7 @@ timeline.to(camera.position, {
 .to(rectlightyellow, { intensity: 0.5, duration: 20 }, "<0.3")
 .to(ambientLight, { intensity: 1, duration: 20 }, "<1")
 .to(backSpotLight, { intensity: 1.5, duration: 20 }, 0)
-.to(pointLight, { intensity: 0.5, duration: 20 }, "<2");
+.to(pointLight, { intensity: 0.5, duration: 20 }, "<1");
 
 const timelinePointlight = gsap.timeline({delay: 3, yoyo: true, repeat:-1});
 
