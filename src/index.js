@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import { GLTFLoader } from "../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
-import { RectAreaLightUniformsLib } from "../node_modules/three/examples/jsm/lights/RectAreaLightUniformsLib.js";
 import { gsap } from "gsap";
 
 //Responsive
@@ -60,40 +59,42 @@ const frameInfo = {
     <button class="btn-laboratory"><div class="arrow"><div class="point"></div><div class="line"></div> <div class="dot"></div><div class="button-text">Découvrir&nbsp;son&nbsp;laboratoire</div></button>
     <div class="text-container">
         <h2>Radioactivité : Entre promesses et périls</h2>
-        <p>À la fin du XIXᵉ siècle, une découverte bouleverse le monde scientifique : la radioactivité. Mise en évidence par Henri Becquerel et approfondie par Pierre et Marie Curie, elle révèle que certains éléments, comme l’uranium et le radium, émettent spontanément un rayonnement invisible et puissant. Cette propriété fascinante défie les connaissances de l’époque et ouvre la voie à une nouvelle compréhension de la matière et de l’énergie.
-        <br><br>
-        Si la radioactivité révolutionne la physique et la médecine, elle se révèle aussi redoutable. Ses applications permettent des avancées majeures, comme les traitements contre le cancer et l’imagerie médicale, mais son énergie immense sera aussi exploitée à des fins militaires. De la radiothérapie aux centrales nucléaires, en passant par la bombe atomique, la radioactivité incarne à la fois un formidable progrès et un défi éthique majeur pour l’humanité.</p>
+        <p>À la fin du XIXᵉ siècle, une découverte bouleverse le monde scientifique : la radioactivité. Mise en évidence par Henri Becquerel et approfondie par Pierre et Marie Curie, elle révèle que certains éléments, comme l’uranium et le radium, émettent spontanément un rayonnement invisible et puissant.<br> <br>
+
+        C’est dans son laboratoire que Marie Curie consacre des années de travail acharné à l’étude de ces mystérieux éléments. Entourée de fioles, de tubes et d’appareils de mesure rudimentaires, elle isole le radium et le polonium, mettant en lumière des propriétés jusque-là inconnues de la matière. Ce lieu devient le cœur de ses recherches, où elle repousse les limites de la science malgré des conditions de travail difficiles et les risques liés à l’exposition prolongée aux radiations.
+<br> <br>
+        Grâce à son dévouement, la radioactivité révolutionne non seulement la physique, mais aussi la médecine. Ses découvertes ouvrent la voie à des avancées majeures, comme les traitements contre le cancer et l’imagerie médicale. Pourtant, cette formidable énergie se révélera aussi redoutable, utilisée aussi bien pour soigner que pour détruire. De la radiothérapie aux centrales nucléaires, en passant par la bombe atomique, la radioactivité incarne à la fois un immense progrès et un défi éthique majeur pour l’humanité.</p>
         ${button}
         
     </div>
     `,
     "frame2": `<div class="text-container">
         <h2>Marie Curie : Un voyage vers l'inconnu </h2>
-        <p>Née en 1867 à Varsovie, sous domination russe, Marie Curie se distingue dès son plus jeune âge. À quatre ans, elle sait déjà lire et écrire, et à quinze ans, elle obtient son baccalauréat. Mais en Pologne, les femmes sont exclues des études supérieures. À vingt-quatre ans, après plusieurs années de sacrifices, elle part pour Paris, déterminée à étudier les mathématiques et la physique à la Sorbonne.
-        En 1893, elle décroche son diplôme en physique, suivi de celui en mathématiques en 1894. Mais Marie ne s’arrête pas là. L’ambition de percer les mystères de la science la pousse à rechercher un laboratoire pour approfondir ses études. C’est alors qu'elle obtient un contrat modeste, financé par la Société pour l’encouragement de l'industrie nationale (SEIN), pour mesurer les propriétés magnétiques de divers aciers. C’est dans ce laboratoire qu'elle croise Pierre Curie, un homme qui deviendra bien plus qu’un collègue, mais l’âme sœur avec qui elle partagera ses découvertes extraordinaires.
+        <p>Née en 1867 à Varsovie, sous domination russe, Marie Curie se distingue dès son plus jeune âge. À quatre ans, elle sait déjà lire et écrire, et à quinze ans, elle obtient son baccalauréat. Mais en Pologne, les femmes sont exclues des études supérieures. À vingt-quatre ans, après plusieurs années de sacrifices, elle part pour Paris, déterminée à étudier les mathématiques et la physique à la Sorbonne.<br> <br>
+        En 1893, elle décroche son diplôme en physique, suivi de celui en mathématiques en 1894. Mais Marie ne s’arrête pas là. L’ambition de percer les mystères de la science la pousse à rechercher un laboratoire pour approfondir ses études. C’est alors qu'elle obtient un contrat modeste, financé par la Société pour l’encouragement de l'industrie nationale (SEIN), pour mesurer les propriétés magnétiques de divers aciers. C’est dans ce laboratoire qu'elle croise Pierre Curie, un homme qui deviendra bien plus qu’un collègue, mais l’âme sœur avec qui elle partagera ses découvertes extraordinaires..<br> <br>
         Avant de percer les mystères de la radioactivité, Marie Curie trace son chemin avec une détermination et une passion sans égales, prête à bouleverser la science.</p>
         ${button}
     </div>
     `,
     "frame3": `<div class="text-container">
         <h2>Au prix de la science : Le sacrifice de Marie Curie</h2>
-        <p>Marie Curie meurt le 4 juillet 1934, des suites d'une anémie pernicieuse, une maladie liée à l'exposition prolongée aux radiations. Tout au long de sa carrière, elle a travaillé sans relâche, manipulant des substances radioactives sans connaître les dangers qu’elles représentaient. Sa passion pour la science et sa quête de découverte l'ont poussée à repousser ses limites, jusqu'à ce que cette même passion la ronge.
-        Malgré les avertissements, elle n’a jamais cessé de consacrer son corps et son esprit à ses recherches, ignorant les risques invisibles mais mortels liés à la radioactivité. En fin de compte, c’est cette même quête de la vérité scientifique qui lui a coûté la vie.
+        <p>Marie Curie meurt le 4 juillet 1934, des suites d'une anémie pernicieuse, une maladie liée à l'exposition prolongée aux radiations. Tout au long de sa carrière, elle a travaillé sans relâche, manipulant des substances radioactives sans connaître les dangers qu’elles représentaient. Sa passion pour la science et sa quête de découverte l'ont poussée à repousser ses limites, jusqu'à ce que cette même passion la ronge..<br> <br>
+        Malgré les avertissements, elle n’a jamais cessé de consacrer son corps et son esprit à ses recherches, ignorant les risques invisibles mais mortels liés à la radioactivité. En fin de compte, c’est cette même quête de la vérité scientifique qui lui a coûté la vie..<br> <br>
         Marie Curie, icône de la science, est restée un modèle de dévouement. Ce n’est qu’en 1995, plus de six décennies après sa mort, que ses cendres, ainsi que celles de son mari Pierre, ont été transférées au Panthéon, en hommage à son incroyable héritage.</p>
         ${button}
     </div>
     `,
     "frame4": `<div class="text-container">
         <h2>Deux prix Nobel, mille obstacles : Le combat de Marie Curie</h2>
-        <p>En 1903, Marie Curie reçoit le Prix Nobel de physique, partagé avec son mari Pierre et Henri Becquerel, pour leurs travaux sur la radioactivité. Elle devient ainsi la première femme à recevoir cette distinction. Cependant, malgré cette reconnaissance, Marie ressent une profonde déception : son rôle est souvent minimisé, et c'est son mari qui est souvent mis en avant.
-        En 1911, elle surmonte ces obstacles et obtient un second Prix Nobel, cette fois en chimie, pour ses découvertes du radium et du polonium. Elle devient la première personne à recevoir deux Prix Nobel dans des disciplines différentes. Ce nouveau prix, bien que symbolique de son génie, ne change pas la perception des milieux scientifiques, et Marie continue à se battre pour être reconnue à sa juste valeur.
+        <p>En 1903, Marie Curie reçoit le Prix Nobel de physique, partagé avec son mari Pierre et Henri Becquerel, pour leurs travaux sur la radioactivité. Elle devient ainsi la première femme à recevoir cette distinction. Cependant, malgré cette reconnaissance, Marie ressent une profonde déception : son rôle est souvent minimisé, et c'est son mari qui est souvent mis en avant..<br> <br>
+        En 1911, elle surmonte ces obstacles et obtient un second Prix Nobel, cette fois en chimie, pour ses découvertes du radium et du polonium. Elle devient la première personne à recevoir deux Prix Nobel dans des disciplines différentes. Ce nouveau prix, bien que symbolique de son génie, ne change pas la perception des milieux scientifiques, et Marie continue à se battre pour être reconnue à sa juste valeur..<br> <br>
         Marie Curie est bien plus qu’une figure scientifique : elle incarne la lutte contre les préjugés et l'injustice, ouvrant la voie à une égalité encore trop distante pour les femmes dans le domaine scientifique.</p>
         ${button}
     </div>
     `,
     "frame5": `<div class="text-container">
         <h2>Les Petites Curies : La science au secours des blessés</h2>
-        <p>Pendant quatre ans, la radiologie devient une arme au service des blessés. Marie Curie, accompagnée de sa fille Irène et de trois autres femmes, se consacre à la formation d’infirmières et au développement de la radiologie mobile. Grâce à son engagement, 18 véhicules sont équipés d’appareils à rayons X, permettant d’apporter la science au plus près des zones de combat. Ces unités mobiles offrent aux médecins un moyen inédit de localiser avec précision les éclats d’obus et les fractures, facilitant ainsi des interventions plus sûres et rapides.
+        <p>Pendant quatre ans, la radiologie devient une arme au service des blessés. Marie Curie, accompagnée de sa fille Irène et de trois autres femmes, se consacre à la formation d’infirmières et au développement de la radiologie mobile. Grâce à son engagement, 18 véhicules sont équipés d’appareils à rayons X, permettant d’apporter la science au plus près des zones de combat. Ces unités mobiles offrent aux médecins un moyen inédit de localiser avec précision les éclats d’obus et les fractures, facilitant ainsi des interventions plus sûres et rapides..<br> <br>
         Surnommées plus tard les “Petites Curies” par sa fille Ève, ces unités rejoignent les convois militaires et viennent compléter les équipements de l’armée. Grâce à elles, plus d’un million de soldats bénéficient d’un diagnostic précis, évitant ainsi de nombreuses amputations inutiles. Cette avancée majeure ne transforme pas seulement la médecine de guerre : elle marque un tournant décisif dans l’utilisation de la radiologie et ouvre la voie à son développement dans les hôpitaux civils. Ainsi, en pleine tourmente, la science s’impose comme un espoir face aux ravages du conflit.</p>
         ${button}
     </div>
@@ -108,7 +109,7 @@ function createFrame(url, position, rotation, name) {
     loaderTexture.load(
         url,
         function (texture) {
-            const laboratory = new THREE.MeshBasicMaterial({ map: texture });
+            const laboratory = new THREE.MeshStandardMaterial({ map: texture });
             const materials = [
                 new THREE.MeshStandardMaterial({ color: 0X909090 }), // left side
                 new THREE.MeshStandardMaterial({ color: 0X909090 }), // right side
@@ -134,11 +135,11 @@ function createFrame(url, position, rotation, name) {
     );
 }
 
-createFrame('assets/textures/Marielaboratory.webp', [0, 0.45, 0.12], [0, 0, 0], "frame1");
-createFrame('assets/textures/Varsovie.png', [-1.3, 0.45, -0.45], [0, 1.5708, 0], "frame2");
-createFrame('assets/textures/Atom.png', [-0.95, 0.45, -1.1], [0, 0, 0], "frame3");
-createFrame('assets/textures/nobel.png', [0.95, 0.45, -1.1], [0, 0, 0], "frame4");
-createFrame('assets/textures/war.png', [1.3, 0.45, -0.45], [0, -1.5708, 0], "frame5");
+createFrame('assets/textures/Marielaboratory.jpg', [0, 0.45, 0.12], [0, 0, 0], "frame1");
+createFrame('assets/textures/Varsovie.jpg', [-1.3, 0.45, -0.45], [0, 1.5708, 0], "frame2");
+createFrame('assets/textures/Atom.jpg', [-0.95, 0.45, -1.1], [0, 0, 0], "frame3");
+createFrame('assets/textures/nobel.jpg', [0.95, 0.45, -1.1], [0, 0, 0], "frame4");
+createFrame('assets/textures/war.jpg', [1.3, 0.45, -0.45], [0, -1.5708, 0], "frame5");
 
 
 //Light
