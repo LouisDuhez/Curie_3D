@@ -34,7 +34,7 @@ document.body.appendChild(renderer.domElement);
 
 //Build
 const loader = new GLTFLoader();
-loader.load('assets/scene.glb', (gltf) => {
+loader.load('/scene.glb', (gltf) => {
     gltf.scene.traverse((child) => {
         if (child.isMesh) {
             // Vérifie si l'objet a déjà une texture
@@ -135,11 +135,11 @@ function createFrame(url, position, rotation, name) {
     );
 }
 
-createFrame('assets/textures/Marielaboratory.jpg', [0, 0.45, 0.12], [0, 0, 0], "frame1");
-createFrame('assets/textures/Varsovie.jpg', [-1.3, 0.45, -0.45], [0, 1.5708, 0], "frame2");
-createFrame('assets/textures/Atom.jpg', [-0.95, 0.45, -1.1], [0, 0, 0], "frame3");
-createFrame('assets/textures/nobel.jpg', [0.95, 0.45, -1.1], [0, 0, 0], "frame4");
-createFrame('assets/textures/war.jpg', [1.3, 0.45, -0.45], [0, -1.5708, 0], "frame5");
+createFrame('/textures/Marielaboratory.jpg', [0, 0.45, 0.12], [0, 0, 0], "frame1");
+createFrame('/textures/Varsovie.jpg', [-1.3, 0.45, -0.45], [0, 1.5708, 0], "frame2");
+createFrame('/textures/Atom.jpg', [-0.95, 0.45, -1.1], [0, 0, 0], "frame3");
+createFrame('/textures/nobel.jpg', [0.95, 0.45, -1.1], [0, 0, 0], "frame4");
+createFrame('/textures/war.jpg', [1.3, 0.45, -0.45], [0, -1.5708, 0], "frame5");
 
 
 //Light
@@ -300,7 +300,7 @@ function onMouseClick(event) {
                 if (frameName === 'frame4' || frameName === 'frame5') {
                     frameInfoElement.style.right =''
                     frameInfoElement.style.left = '0%'
-                    frameInfoElement.style.background = "linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%)";
+                    frameInfoElement.style.background = "linear-gradient(270deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.9) 100%)";
                     document.querySelector('#frame-info div').style.marginRight = '';
                     document.querySelector('#frame-info div').style.marginLeft = '100px';
                     frameInfoElement.style.justifyContent = 'start';
@@ -312,7 +312,7 @@ function onMouseClick(event) {
                 } else {
                     frameInfoElement.style.left = ''
                     frameInfoElement.style.right = '0%'
-                    frameInfoElement.style.background = "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)";
+                    frameInfoElement.style.background = "linear-gradient(90deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5)50%, rgba(0,0,0,0.8) 100%)";
                     document.querySelector('#frame-info div').style.marginLeft = '';
                     document.querySelector('#frame-info div').style.marginRight = '100px';
                     frameInfoElement.style.justifyContent = 'end';
@@ -323,6 +323,7 @@ function onMouseClick(event) {
                     });
                 }
                 document.querySelector('.close-info-frame').addEventListener('click', (e)=> {
+                    e.stopPropagation();
                     gsap.to(camera.position, {
                                 duration: 2,
                                 x: 0,

@@ -1,14 +1,12 @@
 html,
-body
-{
+body {
     margin: 0;
     overflow: hidden;
     box-sizing: border-box;
     font-family: "Jost", sans-serif;
 }
 
-.webgl
-{
+.webgl {
     position: fixed;
     top: 0;
     left: 0;
@@ -68,7 +66,6 @@ body
     animation: arrow 0.5s ease-in-out alternate-reverse infinite forwards;
 }
 
-
 @keyframes arrow {
     0% {
         transform: translateX(0);
@@ -89,7 +86,7 @@ nav {
     margin-top: 10px;
     z-index: 999;
 }
-nav a img{
+nav a img {
     height: 100%;
 }
 
@@ -115,6 +112,7 @@ nav a:hover {
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000; /* Ensure the button is above other elements */
 }
 
 .info button {
@@ -160,19 +158,28 @@ nav a:hover {
     transition: border 0.3s ease-out;
     border-radius: 100%;
 }
-
 .pop-up-container button:hover {
     border: solid 3px white;
     border-radius: 100%;
-    padding: 5px 10px;
+    padding: 10px 12px;
+    background-color: white;
+    color: black;
 }
+.pop-up-container button {
+    border: solid 3px white;
+    background-color: transparent;
+    color: white;
+    border-radius: 100%;
+    padding: 10px 12px;
+}
+
 
 .pop-up-container p {
     border-bottom: solid white 1px;
     border-top: solid white 1px;
     padding: 15px 0px;
-
 }
+
 #frame-info .arrow {
     display: flex;
     align-items: center;
