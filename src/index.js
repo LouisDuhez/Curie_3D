@@ -56,7 +56,9 @@ loader.load('/scene.glb', (gltf) => {
 const button = `<button class="close-info-frame"><i class="fa-solid fa-arrow-left"></i></button>`
 const frameInfo = {
     "frame1": `
-    <button class="btn-laboratory"><div class="arrow"><div class="point"></div><div class="line"></div> <div class="dot"></div><div class="button-text">Découvrir&nbsp;son&nbsp;laboratoire</div></button>
+    <a  class="btn-laboratory" href="https://mariecurielaboratoire.duhez.butmmi.o2switch.site/">
+        <div class="arrow"><div class="point"></div><div class="line"></div> <div class="dot"></div><div class="button-text">Découvrir&nbsp;son&nbsp;laboratoire</div>
+    </a>
     <div class="text-container">
         <h2>Radioactivité : Entre promesses et périls</h2>
         <p>À la fin du XIXᵉ siècle, une découverte bouleverse le monde scientifique : la radioactivité. Mise en évidence par Henri Becquerel et approfondie par Pierre et Marie Curie, elle révèle que certains éléments, comme l’uranium et le radium, émettent spontanément un rayonnement invisible et puissant.<br> <br>
@@ -314,7 +316,7 @@ function onMouseClick(event) {
                     frameInfoElement.style.right = '0%'
                     frameInfoElement.style.background = "linear-gradient(90deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5)50%, rgba(0,0,0,0.8) 100%)";
                     document.querySelector('#frame-info div').style.marginLeft = '';
-                    document.querySelector('#frame-info div').style.marginRight = '100px';
+                    document.querySelector('#frame-info div').style.marginRight = '';
                     frameInfoElement.style.justifyContent = 'end';
                     gsap.from(frameInfoElement, {
                         duration: 3.5,

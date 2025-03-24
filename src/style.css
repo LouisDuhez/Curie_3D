@@ -46,6 +46,9 @@ body {
     border-top: solid 1px white;
     border-bottom: solid 1px white;
     margin-top: 50px;
+    max-width: 700px;
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 #frame-info h2 {
@@ -215,4 +218,15 @@ nav a:hover {
     bottom: 15px;
     font-size: 1.5rem;
     width: fit-content;
+}
+.btn-laboratory {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+}
+
+.btn-laboratory:hover {
+    animation: arrow 0.5s ease-in-out alternate-reverse infinite forwards;
 }
