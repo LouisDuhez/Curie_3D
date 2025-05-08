@@ -53,14 +53,20 @@ loader.load('/scene.glb', (gltf) => {
     scene.add(gltf.scene);
 });
 //Frames
-const button = `<button class="close-info-frame"><i class="fa-solid fa-arrow-left"></i></button>`
+const button = `<button class="close-info-frame">Fermer la fenêtre</button>`
 const frameInfo = {
     "frame1": `
-    <a  class="btn-laboratory" href="https://mariecurielaboratoire.duhez.butmmi.o2switch.site/">
+    <a  class="btn-laboratory" href="https://laboratory.marie-curie-ombres-lumieres.fr/">
         <div class="arrow"><div class="point"></div><div class="line"></div> <div class="dot"></div><div class="button-text">Découvrir&nbsp;son&nbsp;laboratoire</div>
     </a>
     <div class="text-container">
         <h2>Radioactivité : Entre promesses et périls</h2>
+        <div class="pop-up-video">
+        <video class="video" controls>
+            <source src="/assets/laboratory.mp4" type="video/mp4">
+            </video>
+            <button class="video-open" onclick="closePopUpVideo()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
         <p>À la fin du XIXᵉ siècle, une découverte bouleverse le monde scientifique : la radioactivité. Mise en évidence par Henri Becquerel et approfondie par Pierre et Marie Curie, elle révèle que certains éléments, comme l’uranium et le radium, émettent spontanément un rayonnement invisible et puissant.<br> <br>
 
         C’est dans son laboratoire que Marie Curie consacre des années de travail acharné à l’étude de ces mystérieux éléments. Entourée de fioles, de tubes et d’appareils de mesure rudimentaires, elle isole le radium et le polonium, mettant en lumière des propriétés jusque-là inconnues de la matière. Ce lieu devient le cœur de ses recherches, où elle repousse les limites de la science malgré des conditions de travail difficiles et les risques liés à l’exposition prolongée aux radiations.
@@ -208,19 +214,23 @@ backSpotLight.intensity = 0;
 listSpotlight.forEach(light => light.intensity = 0);
 
 
+
 //Raycaster
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2()
 
 
+
 window.addEventListener('mousemove', onMouseMove, false);
+
 function onMouseMove(event) {
+    event.stopPropagation();
+
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);
 
-    
     listSpotlight.forEach(spotlight => {
         spotlight.userData.targetColor.set(0xffffff); 
     });
@@ -246,6 +256,7 @@ function onMouseMove(event) {
         }
     }
 }
+
 
 const cameraPositions = [
     { frame: [0, 0.45, 0.12], cameraPosition: new THREE.Vector3(0.4, 0.45, 0.9), lookAt: new THREE.Vector3(0.4, 0.45, 0) },

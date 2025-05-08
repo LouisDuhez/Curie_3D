@@ -10,17 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./textures/logo.png" type="png">
-    
-    <script src="script.js" defer></script>
-  <script type="module" crossorigin src="./assets/index-CPKm6nE1.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DcmcdhIm.css">
+  <script type="module" crossorigin src="./assets/index-CMUqinzm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CDswYHq3.css">
 </head>
 
 <body>
     <nav>
-        <a href="https://marie-curie.murphy.butmmi.o2switch.site/ 
+        <a href="https://exposition.marie-curie-ombres-lumieres.fr/ 
         "><img src="./textures/logo.png" alt="Accueil"></a>
-        <a class="billeterie" href="https://marie-curie.murphy.butmmi.o2switch.site/billeterie/step1">billetterie</a>
+        <a class="billeterie" href="https://exposition.marie-curie-ombres-lumieres.fr/billeterie">Billetterie</a>
     </nav>
     <div id="frame-info"></div>
     <div class="info">
@@ -33,5 +31,30 @@
             <button onclick="closePopUp()"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </div>
+    <script>
+        function openPopUp() {
+    popUp = document.querySelector('.info-pop-up');
+    popUp.style.opacity = "1";
+    popUp.style.zIndex = "999"
+}
+function closePopUp() {
+    popUp = document.querySelector('.info-pop-up');
+    popUp.style.opacity = "0";
+    popUp.style.zIndex = "-1"
+}
+
+function openPopUpVideo() {
+    const popUpVideo = document.querySelector('.pop-up-video');
+    popUpVideo.style.opacity = "1";
+    popUpVideo.style.zIndex = "999";
+}
+
+function closePopUpVideo() {
+    const popUpVideo = document.querySelector('.pop-up-video');
+    popUpVideo.style.opacity = "0";
+    popUpVideo.style.zIndex = "-1";
+}
+
+    </script>
 </body>
 </html>

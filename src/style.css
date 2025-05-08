@@ -58,15 +58,24 @@ body {
 #frame-info button {
     margin-top: 20px;
     width: fit-content;
-    font-size: 2rem;
     background-color: transparent;
     border: solid transparent;
     color: white;
     border-radius: 32px;
 }
 
-#frame-info button:hover {
-    animation: arrow 0.5s ease-in-out alternate-reverse infinite forwards;
+.video-open {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.video-open span{
+    font-size: 1rem;
+}
+.video-open:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-out;
 }
 
 @keyframes arrow {
@@ -102,6 +111,7 @@ nav a:hover {
 }
 
 .billeterie {
+    font-size: 1.5rem;
     height: fit-content;
     margin-left: auto;
     color: white;
@@ -154,13 +164,17 @@ nav a:hover {
 .close-info-frame {
     width: fit-content;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color: transparent;
     border: transparent 3px solid;
     padding: 5px 10px;
-    transition: border 0.3s ease-out;
+    padding-left: 0;
     border-radius: 100%;
 }
+.close-info-frame:hover {
+    text-decoration: underline;
+}
+
 .pop-up-container button:hover {
     border: solid 3px white;
     border-radius: 100%;
@@ -229,4 +243,26 @@ nav a:hover {
 
 .btn-laboratory:hover {
     animation: arrow 0.5s ease-in-out alternate-reverse infinite forwards;
+}
+
+.pop-up-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: -1;
+    opacity: 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-up-video video {
+    width: 80%;
+    max-width: 1000px;
+    aspect-ratio: 16/9;
+    background-color: black;
 }
